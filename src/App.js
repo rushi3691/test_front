@@ -6,7 +6,7 @@ axios.defaults.withCredentials = true;
 function App() {
   const URLS = [
     "https://rich-tan-mackerel.cyclic.app",
-    "http://localhost:8000"
+    "https://testback-production.up.railway.app/"
   ]
   const createCookie = () => {
     axios.get(`${URLS[1]}/s`, { withCredentials: true })
