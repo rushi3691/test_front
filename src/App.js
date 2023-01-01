@@ -4,23 +4,26 @@ axios.defaults.withCredentials = true;
 
 
 function App() {
-
+  const URLS = [
+    "https://rich-tan-mackerel.cyclic.app",
+    "http://localhost:8000"
+  ]
   const createCookie = () => {
-    axios.get("https://rich-tan-mackerel.cyclic.app/s", { withCredentials: true })
+    axios.get(`${URLS[1]}/s`, { withCredentials: true })
       .then((res) => {
         console.log(res.data)
       })
   }
 
   const clearCookie = ()=>{
-    axios.get("https://rich-tan-mackerel.cyclic.app/r", {withCredentials: true})
+    axios.get(`${URLS[1]}/r`, {withCredentials: true})
     .then((res)=>{
       console.log(res.data)
     })
   }
 
   const checkCookie = () =>{
-    axios.get("https://rich-tan-mackerel.cyclic.app/c", {withCredentials: true})
+    axios.get(`${URLS[1]}/c`, {withCredentials: true})
     .then((res)=>{
       console.log(res.data);
     })
